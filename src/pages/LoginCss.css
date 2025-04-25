@@ -1,0 +1,191 @@
+/* Fond global */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, #fef5eb, #e7d1bd);
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  /* Header/logo */
+  .header {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+  }
+  
+  #logo-login-page {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  #logo-login-page:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  /* Boîte de connexion */
+  .login-box {
+    background-color: #fff9f5;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    max-width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Titre et sous-titre */
+  .login-title {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #703c2c;
+    margin-bottom: 0.5rem;
+  }
+  
+  .login-text {
+    color: #7b5b4d;
+    font-size: 14px;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Champs de formulaire */
+  .input-group {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+  }
+  
+  .icon {
+    font-size: 16px;
+    color: gray;
+    margin-right: 8px;
+  }
+  
+  .login-input {
+    border: none;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  /* MDP oublié */
+  .forgot-password {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+  
+  .forgot-password a {
+    color: #703c2c;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  /* Checkbox */
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 13px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .checkbox-group input {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+  
+  /* Bouton */
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #e1c699, #d9b687);
+    color: #333;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .login-button:hover {
+    background: linear-gradient(to right, #e7cfa8, #e2ba8d);
+  }
+  
+  /* Lien d'inscription */
+  .register-link {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #333;
+  }
+  
+  .register-link a {
+    color: #375cb4;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .login-box {
+      width: 85%;
+      padding: 1.5rem;
+    }
+  
+    .header {
+      top: 20px;
+      left: 20px;
+    }
+  
+    #logo-login-page {
+      width: 100px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-box {
+      width: 90%;
+      padding: 1.2rem;
+    }
+  
+    .login-title {
+      font-size: 1.5rem;
+    }
+  
+    .login-text {
+      font-size: 13px;
+    }
+  
+    .login-button {
+      padding: 14px;
+      font-size: 14px;
+    }
+  
+    .register-link {
+      font-size: 12px;
+    }
+  }
+  

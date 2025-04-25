@@ -1,0 +1,97 @@
+/* Conteneur principal */
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw; 
+    padding: 2rem;
+    background: linear-gradient(135deg, #f5eee6, #ddbda0);
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  
+  /* Image du robot */
+  .homepage-image {
+    width: 16rem;
+    height: 16rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  /* Responsive image */
+  @media (max-width: 768px) {
+    .homepage-image {
+      width: 10rem;
+      height: 10rem;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  /* Titre */
+  .homepage-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2e1d1d;
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive titre */
+  @media (max-width: 768px) {
+    .homepage-title {
+      font-size: 2.2rem;
+    }
+  }
+  
+  /* Texte d'accroche */
+  .homepage-text {
+    font-size: 1.2rem;
+    color: #4b3e3e;
+    max-width: 35rem;
+  }
+  
+  /* Responsive texte */
+  @media (max-width: 768px) {
+    .homepage-text {
+      font-size: 1rem;
+      max-width: 90%;
+    }
+  }
+  
+  /* Boutons */
+  .homepage-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Boutons stylisés */
+  .homepage-button {
+    background-color: #e3c8a6;
+    color: #2e1d1d;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  /* Hover */
+  .homepage-button:hover {
+    background-color: #d6b38a;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive boutons */
+  @media (max-width: 768px) {
+    .homepage-button {
+      width: 80%;
+    }
+  }
+  

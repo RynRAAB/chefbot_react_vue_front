@@ -1,0 +1,229 @@
+/* Conteneur principal avec fond dégradé */
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background: linear-gradient(to right, #fef6f0, #e6cebc);
+    padding: 2rem;
+  }
+  
+  
+  /* Logo */
+  .header {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+  }
+  
+  #logo-signup-page {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Boîte du formulaire centrée */
+  .signup-box {
+    background-color: #fff9f4;
+    border-radius: 16px;
+    padding: 0rem 2.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 520px;
+    width: 100%;
+    animation: fadeIn 0.8s ease;
+    border: 1px solid #f2dfcf;
+  }
+  
+  /* Animation d’apparition */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Titre et description */
+  .signup-title {
+    font-size: 1.9rem;
+    color: #7B4F3F;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .signup-text {
+    color: #5c3c2f;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  /* Groupe input */
+  .input-group {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .icon {
+    color: #aaa;
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  
+  .signup-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 15px;
+    color: #333;
+  }
+  
+  /* Nom / Prénom */
+  .input-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .input-row .input-group {
+    flex: 1;
+  }
+  
+  /* Note mot de passe */
+  .password-note {
+    font-size: 12px;
+    color: #7B4F3F;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  /* Checkbox */
+  .checkbox-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: black;
+    width: 100%;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+  }
+  
+  .checkbox-inline input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  
+  .checkbox-inline label {
+    line-height: 1.4;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .checkbox-inline a {
+    color: #3a5bd8;
+    text-decoration: underline;
+  }
+  
+  
+  
+  /* Bouton d'inscription */
+  .signup-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #E1C699;
+    color: #333;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-button:hover {
+    background-color: #d2ad73;
+    transform: scale(1.02);
+  }
+  
+  /* Lien connexion */
+  .login-link {
+    margin-top: 1rem;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .login-link a {
+    text-decoration: underline;
+    color: #2e6dd8;
+  }
+  
+  /* Messages d'erreur */
+  #inscription-result,
+  #first-or-last-name-error,
+  #password-confirmation-error {
+    text-align: left;
+    font-size: 13px;
+    font-weight: bold;
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px 12px;
+    display: none;
+    border-radius: 5px;
+    color: #a94442;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .logo-wrapper {
+        position: static;
+        justify-content: center;
+        margin-bottom: 1rem;
+        flex-direction: column;
+      }
+    
+      #logo-signup-page {
+        width: 50px;
+      }
+    .signup-box {
+      padding: 1.5rem;
+    }
+  
+    .signup-title {
+      font-size: 1.6rem;
+    }
+  
+    .signup-text {
+      font-size: 13px;
+    }
+  
+    .login-link {
+      font-size: 12px;
+    }
+  }
+  
