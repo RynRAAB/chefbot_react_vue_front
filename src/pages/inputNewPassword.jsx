@@ -58,7 +58,7 @@ export default function LoginPage() {
         return;
       }
       try{
-        const response = await axios.post("http://localhost:5001/change_password", {
+        const response = await axios.post("https://chefbot-tfm1.onrender.com/change_password", {
           pswd,
           token,
         });

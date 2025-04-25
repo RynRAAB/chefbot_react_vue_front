@@ -13,7 +13,7 @@ export default function LoginPage() {
       e.preventDefault();
       const error = document.getElementById("email-error");
       try{
-        const response = await axios.post("http://localhost:5001/reset_password", {
+        const response = await axios.post("https://chefbot-tfm1.onrender.com/reset_password", {
           email,
         });
         setMessage(response.data.message);

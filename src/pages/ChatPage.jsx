@@ -29,7 +29,7 @@ export default function ChatPage() {
     const checkMySession = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5001/dashboard", {
+        const response = await axios.get("https://chefbot-tfm1.onrender.com/dashboard", {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export default function ChatPage() {
 
   const fetchConversations = async () => {
     try {
-      const response = await fetch("http://localhost:5001/conversations", {
+      const response = await fetch("https://chefbot-tfm1.onrender.com/conversations", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       const data = await response.json();
@@ -64,7 +64,7 @@ export default function ChatPage() {
 
   const fetchConversation = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5001/conversations/${id}`, {
+      const response = await fetch(`https://chefbot-tfm1.onrender.com/conversations/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       const data = await response.json();
@@ -77,7 +77,7 @@ export default function ChatPage() {
 
   const createConversation = async (title) => {
     try {
-      const response = await fetch("http://localhost:5001/conversations", {
+      const response = await fetch("https://chefbot-tfm1.onrender.com/conversations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ export default function ChatPage() {
     const loadingIndex = messages.length + 1;
 
     try {
-      const response = await fetch(`http://localhost:5001/chat/${currentConversation}`, {
+      const response = await fetch(`https://chefbot-tfm1.onrender.com/chat/${currentConversation}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -183,7 +183,7 @@ export default function ChatPage() {
     }
     try {
       const response = await axios.post(
-        "http://127.0.0.1:5001/add_favorite",
+        "https://chefbot-tfm1.onrender.com/add_favorite",
         { type,
           title,
           content,
@@ -267,7 +267,7 @@ export default function ChatPage() {
                     e.stopPropagation();
                     if (window.confirm("Supprimer cette conversation ?")) {
                       try {
-                        await axios.delete(`http://localhost:5001/conversations/${conv.id}`, {
+                        await axios.delete(`https://chefbot-tfm1.onrender.com/conversations/${conv.id}`, {
                           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
                         });
                         setConversations((prev) =>

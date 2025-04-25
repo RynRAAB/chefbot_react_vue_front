@@ -47,7 +47,7 @@ export default function SignupPage() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5001/signup", {
+      const response = await axios.post("https://chefbot-tfm1.onrender.com/signup", {
         email,
         first_name,
         last_name,

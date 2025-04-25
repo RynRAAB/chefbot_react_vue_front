@@ -18,7 +18,7 @@ export default function LoginPage() {
       const token = localStorage.getItem("token");
       if (token)  {
         try {
-          const response = await axios.get("http://localhost:5001/dashboard", {
+          const response = await axios.get("https://chefbot-tfm1.onrender.com/dashboard", {
             headers : {
               Authorization: `Bearer ${token}`,
               "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export default function LoginPage() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5001/login", {
+      const response = await axios.post("https://chefbot-tfm1.onrender.com/login", {
         email,
         password,
       });

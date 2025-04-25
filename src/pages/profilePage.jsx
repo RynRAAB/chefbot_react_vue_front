@@ -37,7 +37,7 @@ export default function ProfilePage() {
     const checkMyOwnSession = async () => {
       try{
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5001/dashboard", 
+        const response = await axios.get("https://chefbot-tfm1.onrender.com/dashboard", 
           {
             headers : {
               Authorization : `Bearer ${token}`,
@@ -92,7 +92,7 @@ export default function ProfilePage() {
       return;
     }
     try{
-      const response = await axios.post("http://127.0.0.1:5001/changeNames",
+      const response = await axios.post("https://chefbot-tfm1.onrender.com/changeNames",
         {
           firstName,
           lastName,
@@ -168,7 +168,7 @@ export default function ProfilePage() {
     try{
       const myActualPassword = document.getElementById("actualPassword").value;
       const myNewPassword = document.getElementById("newPassword").value;
-      const response = await axios.post("http://127.0.0.1:5001/modifyPassword",
+      const response = await axios.post("https://chefbot-tfm1.onrender.com/modifyPassword",
         {
           myActualPassword,
           myNewPassword,
@@ -285,7 +285,7 @@ export default function ProfilePage() {
   useEffect(()=> {
     const updateSession = async () => {
         try{
-          const response = await axios.post("http://127.0.0.1:5001/get_my_personnalisation",
+          const response = await axios.post("https://chefbot-tfm1.onrender.com/get_my_personnalisation",
             {},
             {
               headers: {
@@ -349,7 +349,7 @@ export default function ProfilePage() {
 
     const perso_error = document.getElementById("personnalisation-error");
     try {
-      const response = await axios.post("http://127.0.0.1:5001/personalize_my_profile",
+      const response = await axios.post("https://chefbot-tfm1.onrender.com/personalize_my_profile",
         {
           myAllergies,
           myBannedIngredients,
@@ -383,7 +383,7 @@ export default function ProfilePage() {
   useEffect(() => {
     const updateSession = async (e) => {
       try{
-        const response = await axios.post("http://127.0.0.1:5001/get_my_favorites",
+        const response = await axios.post("https://chefbot-tfm1.onrender.com/get_my_favorites",
           {},
           {
             headers: {
@@ -413,7 +413,7 @@ export default function ProfilePage() {
     if (window.confirm("Êtes-vous sûr de vouloir supprimer cet élément de vos favoris ?")) {
       try {
         const response = await axios.post(
-          "http://127.0.0.1:5001/deleteFavorite",
+          "https://chefbot-tfm1.onrender.com/deleteFavorite",
           { id },
           {
             headers: {
