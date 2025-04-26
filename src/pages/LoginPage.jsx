@@ -28,7 +28,7 @@ export default function LoginPage() {
             window.location.href= "https://chefbot-tfm1.onrender.com/chatpage";
           else {
             localStorage.removeItem("token");
-            navigate("/login");
+            window.location.href= "https://chefbot-tfm1.onrender.com/login";
           }
         } catch(error) {
           localStorage.removeItem("token");
