@@ -18,7 +18,7 @@ export default function LoginPage() {
       const token = localStorage.getItem("token");
       if (token)  {
         try {
-          const response = await axios.get("https://chefbot-tfm1.onrender.com/dashboard", {
+          const response = await axios.post("https://chefbot-tfm1.onrender.com/dashboard", {
             headers : {
               Authorization: `Bearer ${token}`,
               "Content-Type": "application/json",
@@ -33,8 +33,8 @@ export default function LoginPage() {
         } catch(error) {
           localStorage.removeItem("token");
           navigate( "/login" );
-        }
-      }
+        } 
+      } 
     };
     checkSession();
   }, [navigate]);
