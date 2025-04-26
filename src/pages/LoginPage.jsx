@@ -25,14 +25,14 @@ export default function LoginPage() {
             },
           });
           if (response.data.message === "Token valide")
-            navigate("/chatpage");
+            navigate("https://chefbot-tfm1.onrender.com/chatpage");
           else {
             localStorage.removeItem("token");
             navigate("/login");
           }
         } catch(error) {
           localStorage.removeItem("token");
-          navigate("/login");
+          navigate("https://chefbot-tfm1.onrender.com/login");
         }
       }
     };
