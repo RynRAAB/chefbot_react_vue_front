@@ -21,6 +21,7 @@ export default function SignupPage() {
   const verify_name_validation = (name_entry) => {
     const error_name = document.getElementById("first-or-last-name-error");
     error_name.style.display = is_name(name_entry) ? "none" : "flex";
+    error_name.style.display = is_name(name_entry) ? "" : "Le nom, prénom doit être composé que de lettres, espaces, tirêts(-) !";
   };
 
   const verify_password_correspondance = () => {
@@ -28,6 +29,7 @@ export default function SignupPage() {
     const confirm = document.getElementById("pswd-confirmation");
     const error = document.getElementById("password-confirmation-error");
     error.style.display = pswd.value === confirm.value ? "none" : "flex";
+    error.textContent = pswd.value === confirm.value ? "" : "Les mots de passes ne sont pas identiques !";
   };
 
   const handleSignUp = async (e) => {
@@ -38,11 +40,13 @@ export default function SignupPage() {
 
     if (pswd.value !== confirm.value) {
       document.getElementById("password-confirmation-error").style.display = "flex";
+      document.getElementById("password-confirmation-error").textContent = "Les mots de passes ne sont pas identiques !";
       return;
     }
 
     if (!terms.checked) {
       document.getElementById("text-error").style.display = "flex";
+      document.getELementById("text-error").textContent = "Vous devez accepter les conditions d'utilisation !";
       return;
     }
 
@@ -122,7 +126,7 @@ export default function SignupPage() {
                 />
               </div>
             </div>
-            <p id="first-or-last-name-error">Le nom, prénom doit être composé que de lettres, espaces, tirêts(-) !</p>
+            <p id="first-or-last-name-error"></p>
 
             <div className="input-group">
               <span className="icon">🔒</span>
@@ -154,7 +158,7 @@ export default function SignupPage() {
               />
             </div>
 
-            <p id="password-confirmation-error">Les mots de passes ne sont pas identiques !</p>
+            <p id="password-confirmation-error"></p>
             <p className="password-note">
               Le mot de passe doit comporter au minimum une lettre majuscule, un chiffre et un caractère spécial (ex. !, @, #).
             </p>
@@ -169,7 +173,7 @@ export default function SignupPage() {
                 de ChefBOT.
               </label>
             </div>
-            <p id="text-error">Vous devez accepter les conditions d'utilisation !</p>
+            <p id="text-error"></p>
 
             <button type="submit" className="signup-button">
               Créer mon compte
@@ -181,6 +185,7 @@ export default function SignupPage() {
                 Cliquez ici pour vous connecter
               </a>
             </p>
+            
           </div>
         </form>
       </div>
