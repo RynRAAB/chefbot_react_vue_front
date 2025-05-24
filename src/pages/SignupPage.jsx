@@ -21,7 +21,7 @@ export default function SignupPage() {
   const verify_name_validation = (name_entry) => {
     const error_name = document.getElementById("first-or-last-name-error");
     error_name.style.display = is_name(name_entry) ? "none" : "flex";
-    error_name.style.display = is_name(name_entry) ? "" : "Le nom, prénom doit être composé que de lettres, espaces, tirêts(-) !";
+    error_name.textContent = is_name(name_entry) ? "" : "Le nom, prénom doit être composé que de lettres, espaces, tirêts(-) !";
   };
 
   const verify_password_correspondance = () => {
