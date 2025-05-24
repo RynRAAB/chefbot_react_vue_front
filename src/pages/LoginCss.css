@@ -77,6 +77,7 @@
   }
   
   .login-input {
+    color: black;
     border: none;
     width: 100%;
     outline: none;
