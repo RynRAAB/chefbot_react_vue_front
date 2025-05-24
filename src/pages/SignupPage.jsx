@@ -15,7 +15,7 @@ export default function SignupPage() {
   const [message, setMessage] = useState("");
 
   function is_name(name) {
-    return /^[a-zA-Z\s-]+$/.test(name);
+    return /^[a-zA-Z\s-]*$/.test(name);
   }
 
   const verify_name_validation = (name_entry) => {
