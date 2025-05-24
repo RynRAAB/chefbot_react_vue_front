@@ -128,7 +128,7 @@ export default function LoginPage() {
             </div>
 
             <p id="text-error">Vous devez accepter les conditions d'utilisation !</p>
-            <p id="incorrect-password">Identifiant ou mot de passe incorrect !</p>
+            <p id="incorrect-password"></p>
 
             <button type="submit" className="login-button">Me connecter</button>
           </form>
