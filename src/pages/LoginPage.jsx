@@ -46,11 +46,11 @@ export default function LoginPage() {
 
     if (!checkbox.checked){
       error.style.display = "flex";
-      error.style.textContent = "Vous devez accepter les conditions d'utilisation !";
+      error.textContent = "Vous devez accepter les conditions d'utilisation !";
       return;
     } else {
       error.style.display = "none";
-      error.style.textContent = "";
+      error.textContent = "";
     }
 
     try {
