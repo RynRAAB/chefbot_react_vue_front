@@ -46,9 +46,11 @@ export default function LoginPage() {
 
     if (!checkbox.checked){
       error.style.display = "flex";
+      error.style.textContent = "Vous devez accepter les conditions d'utilisation !";
       return;
     } else {
       error.style.display = "none";
+      error.style.textContent = "";
     }
 
     try {
@@ -127,7 +129,7 @@ export default function LoginPage() {
               </label>
             </div>
 
-            <p id="text-error">Vous devez accepter les conditions d'utilisation !</p>
+            <p id="text-error"></p>
             <p id="incorrect-password"></p>
 
             <button type="submit" className="login-button">Me connecter</button>
