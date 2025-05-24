@@ -369,13 +369,16 @@ export default function ProfilePage() {
       if (response.data.message === "Nouvelle personnalisation prise en compte") {
         perso_error.className = "success"; // Applique le style de succès
         perso_error.textContent = "C'est fait! votre nouvelle personnalisation est prise en compte";
+        perso_error.style.display = "flex";
       } else {
+        perso_error.style.display = "flex";
         perso_error.className = "error"; // Applique le style d'erreur
         perso_error.textContent = "Erreur réseau produite lors de la tentative de modification de votre personnalisation... Vérifiez votre connexion!";
       }
     } catch (error) {
       perso_error.className = "error"; // Applique le style d'erreur
       perso_error.textContent = "Erreur réseau produite lors de la tentative de modification de votre personnalisation... Vérifiez votre connexion!";
+      perso_error.style.display = "flex";
     }
   };
 
