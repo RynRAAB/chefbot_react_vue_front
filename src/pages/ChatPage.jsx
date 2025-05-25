@@ -257,7 +257,7 @@ export default function ChatPage() {
             <li
               key={conv.id}
               className={conv.id === currentConversation ? "active-conversation" : ""}
-              onClick={() => fetchConversation(conv.id)}>{conv.title}
+              onClick={() => fetchConversation(conv.id)}
             >
               <div className="conversation-header">
                 <span onClick={() => fetchConversation(conv.id)}>{conv.title}</span>
